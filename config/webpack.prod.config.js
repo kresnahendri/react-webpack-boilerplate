@@ -31,7 +31,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('bundle.css'),
     new CopyWebpackPlugin([
-      { from: APP_DIR + '/src/assets', to: BUILD_DIR + '/assets' }
+      { from: APP_DIR + '/src/assets/images', to: BUILD_DIR + '/assets/images' }
     ]),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,

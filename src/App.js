@@ -13,7 +13,7 @@ const styles = {
 export default () => {
   return (
     <div>
-      <img src={require('./assets/images/webpack-logo.svg')} alt="Webpack" style={styles.logo}/>
+      <img src={require('./assets/images/webpack-logo.svg')} alt="Webpack" style={styles.logo} />
       <h1>Hello React!</h1>
       <small><b>Built by Webpack</b></small>
       <Button>Click me!</Button>
