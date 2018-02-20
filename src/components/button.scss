@@ -1,0 +1,8 @@
+@import '_const-colors.scss';
+button.btn {
+    border: 1px solid #ddd;
+    &.btn-primary {
+        background-color: $white;
+        color: $blue;
+    }
+}
