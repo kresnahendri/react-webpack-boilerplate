@@ -11,12 +11,12 @@ const Root = styled('div')`
   align-items: center;
 `
 const Ball = styled('div')`
-  height: 15px;
-  width: 15px;
+  height: 30px;
+  width: 30px;
   border-radius: 100%;
   position: absolute;
   background: ${(props) => ((props.position === 'left') ? 'orange' : 'purple')};
-  left: ${(props) => (props.position === 'left' ? '5px' : 'calc(100% - 20px)')};
+  left: ${(props) => (props.position === 'left' ? '10px' : 'calc(100% - 40px)')};
   transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
 `
 const Line = styled('div')`

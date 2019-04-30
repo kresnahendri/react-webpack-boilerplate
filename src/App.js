@@ -1,8 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { Button, Marbles } from './components'
-import { actionPing, actionPong } from './store/actions/pingActions'
+import { MarbleContainer } from './containers'
 
 const Root = styled('div')`
   padding: 0 20px;
@@ -23,35 +21,15 @@ const Logo = styled('img')`
   width: auto;
 `
 
-const App = (props) => {
-  const { pingResult } = props
-
-  const handleClick = () => {
-    if (pingResult === null) {
-      props.actionPing()
-    } else if (pingResult.toUpperCase() === 'PING') {
-      props.actionPong()
-    } else if (pingResult.toUpperCase() === 'PONG') {
-      props.actionPing()
-    }
-  }
-
+const App = () => {
   return (
     <Root>
       <Logo src={require('@/assets/logo.svg')} alt="" />
       <h1>Hello React!</h1>
       <p>Built by Webpack</p>
-      <Button onClick={handleClick}>Move the ball</Button>
-      <Marbles position={(pingResult !== null && pingResult.toUpperCase() === 'PING') ? 'left' : 'right'} />
+      <MarbleContainer />
     </Root>
   )
 }
 
-const mapStateToProps = (state) => ({
-  pingResult: state.ping.result,
-})
-
-export default connect(mapStateToProps, {
-  actionPing,
-  actionPong,
-})(App)
+export default App
